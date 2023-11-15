@@ -53,7 +53,7 @@ def recommended_music(playlist):
     # Kullanıcının dinlediği her şarkının özelliklerini al
     user_song_features = data[data['id'].isin(playlist)]
 
-    # Min-Max normalizasyonu uygula
+    # Min-max normalizasyonu uygula
     scaler = MinMaxScaler()
     data_scaled = scaler.fit_transform(data)
     user_song_features_scaled = scaler.transform(user_song_features)
